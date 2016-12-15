@@ -26,8 +26,32 @@
         <!-- 其他-->
         <div class="extra"></div>
     </div>
-    <div class="section second">第二屏</div>
-    <div class="section third">第三屏</div>
+    <!-- 第二屏-->
+    <div class="section second">
+        <!-- 盾牌-->
+        <div class="shiel">
+            <img src="./images/shield_1.png" alt=""/>
+            <img src="./images/shield_2.png" alt=""/>
+            <img src="./images/shield_3.png" alt=""/>
+            <img src="./images/shield_4.png" alt=""/>
+            <img src="./images/shield_5.png" alt=""/>
+            <img src="./images/shield_6.png" alt=""/>
+            <img src="./images/shield_7.png" alt=""/>
+            <img src="./images/shield_8.png" alt=""/>
+            <img src="./images/shield_9.png" alt=""/>
+        </div>
+        <!-- 其他信息-->
+        <div class="extra"></div>
+    </div>
+    <!-- 第三屏-->
+    <div class="section third">
+        <!-- 其他信息-->
+        <div class="extra"></div>
+        <!-- 圆-->
+        <div class="circle"></div>
+        <!-- 火箭-->
+        <div class="rocket"></div>
+    </div>
     <div class="section fourth">第四屏</div>
     <div class="section fifth">第五屏</div>
 </div>
@@ -38,7 +62,7 @@
 <script>
     $(function(){
         $('#fullpage').fullpage({
-            'sectionsColor': ['#254875', '#00FA66', '#254587', '#695684','#453627'],
+            'sectionsColor': ['#254875', '#34BFC4', '#B2813B', '#A798B9','#453627'],
             afterLoad: function (anchorlink, index) {
                 $('.section').removeClass('current');
                 setTimeout(function () {

@@ -5,6 +5,7 @@ body{
 
 .section{
     overflow: hidden;
+    position: relative;
 }
 .first{
 
@@ -28,9 +29,114 @@ body{
     height: 50px;
     background: url("../images/info_1.png") center no-repeat;
 }
-
+/*第一屏动画*/
 .first.current .text img{
     transition: all 1s ease-in-out;
     margin: 0 5px;
     opacity: 1;
 }
+
+.second{
+
+}
+
+.second .shiel{
+    width: 436px;
+    font-size: 0;
+}
+
+.second .shiel img:nth-child(1){
+    transform: translate(100px,-30px)rotate(27deg);
+}
+.second .shiel img:nth-child(2){
+    transform: translate(280px,-30px)rotate(45deg);
+}
+.second .shiel img:nth-child(3){
+    transform: translate(60px,-50px)rotate(40deg);
+}
+.second .shiel img:nth-child(4){
+    transform: translate(100px,-30px)rotate(27deg);
+}
+.second .shiel img:nth-child(5){
+    transform: translate(300px,-300px)rotate(97deg);
+}
+.second .shiel img:nth-child(6){
+    transform: translate(160px,-120px)rotate(47deg);
+}
+.second .shiel img:nth-child(7){
+    transform: translate(500px,-30px)rotate(27deg);
+}
+.second .shiel img:nth-child(8){
+    transform: translate(100px,-90px)rotate(27deg);
+}
+.second .shiel img:nth-child(9){
+    transform: translate(400px,-30px)rotate(27deg);
+}
+.second>div{
+    padding: 0 60px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.second .extra{
+    width: 635px;
+    height: 309px;
+    background: url("../images/info_2.png");
+}
+
+.second.current .shiel img{
+    transition: all 1s ease ;
+    transform: translate(0.0)rotate(0deg);
+}
+
+/*第三屏*/
+
+.third{
+
+}
+
+.third>div{
+    padding: 0 60px;
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+}
+.third .extra{
+    width: 631px;
+    height: 278px;
+    background: url("../images/info_3.png");
+}
+
+.third .circle{
+    width: 453px;
+    height: 449px;
+    background: url("../images/circle.png");
+}
+
+.third .rocket{
+    width: 203px;
+    height: 204px;
+    background: url("../images/rocket.png");
+
+    position: absolute;
+
+    left: 0;
+    bottom: -204px;
+
+}
+
+/*第三屏动画*/
+.third.current .rocket{
+    transition: all 1s ease-in-out;
+    transform: translate(1000px,-380px);
+}
+
+
+
+
+
+
+
+
+
