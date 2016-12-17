@@ -132,11 +132,219 @@ body{
     transform: translate(1000px,-380px);
 }
 
+/*第四屏*/
+.fourth{
 
+}
 
+.fourth>div{
+    /*padding: 0 60px;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.fourth .search{
+    width: 529px;
+    /*height: 400px;*/
+    /*background: url("../images/search.png");*/
+    /*background: pink;*/
+    position: relative;
 
+    transform: translateX(-200%);
+}
 
+.fourth .search .bar{
+    width: 100%;
+    height: 66px;
+    background: url("../images/search.png");
+}
 
+.fourth .search .keys{
+    width: 0px;
+    height: 22px;
+    background: url("../images/key.png");
 
+    position: absolute;
 
+    left:23px;
+    top:23px;
+}
 
+.fourth .search .result{
+    width: 100%;
+    height: 372px;
+    overflow: hidden;
+
+    position: relative;
+
+    top: -13px ;
+}
+
+.fourth .search .result img{
+    transform: translateY(-100%);
+}
+.fourth .extra{
+    width: 612px;
+    height: 410px;
+    background: url("../images/info_4.png") no-repeat;
+}
+
+.fourth.current .search{
+    transition:  all 1s ease-in-out;
+    transform: translate(0);
+}
+
+.fourth.current .keys{
+    animation: typing 1s 1.3s steps(5) forwards;
+}
+@keyframes typing{
+    from{
+        width: 0;
+    }
+    to{
+        width: 99px;
+    }
+}
+
+.fourth.current .search .result img{
+
+    transform: translateY(0);
+    transition: all 1s 2.5s;
+}
+
+/*第五苹果*/
+.fifth{
+
+}
+
+.fifth>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fifth .extra {
+    width: 100%;
+    height: 200px;
+    background: url("../images/info_5.png") center no-repeat;
+}
+
+.fifth .browser{
+    width: 1004px;
+    flex: 1;
+    background: deeppink;
+
+    position: relative;
+}
+
+.fifth .browser .line{
+    position: absolute;
+}
+.fifth .browser .lineleft,
+.fifth .browser .lineright{
+    width: 0;
+    border-left: 1px solid rgba(255,255,255,0.6);
+    height: 100%;
+    top: 0;
+}
+
+.fifth .browser .lineleft{
+    left: 0;
+    transform:translateY(-100%)
+}
+
+.fifth .browser .lineright{
+    right: 0;
+    transform:translateY(100%)
+}
+
+.fifth .browser .linetop,
+.fifth .browser .linebottom{
+    left: 0;
+    border-top: 1px solid rgba(255,255,255,0.6);
+    width: 100%;
+}
+
+.fifth .browser .linetop{
+    top: 0;
+    transform:translateX(-100%)
+}
+.fifth .browser .linebottom{
+    bottom: 0;
+    transform:translateX(100%)
+
+}
+
+.fifth .browser .toolbar{
+    width: 1004px;
+    height: 79px;
+    background: url("../images/toolbar.png");
+
+    /*position: relative;*/
+
+    opacity: 0;
+}
+
+.fifth .browser .border-box{
+    width: 0px;
+    height: 27px;
+    overflow: hidden;
+
+    position: absolute;
+    left: 70px;
+    top:31px;
+}
+
+.fifth .browser .border{
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255,255,255,0.6);
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.fifth .browser .taskbar{
+    width: 100%;
+    height: 29px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    opacity: 0;
+
+    background: url("../images/extra.png") right center no-repeat;
+}
+
+/*第五屏动画*/
+
+.fifth.current .browser .lineleft{
+    transition:all 0.5s  ease-in-out;
+    transform: translateY(0);
+}
+
+.fifth.current .browser .lineright{
+    transition:all 0.5s  0.1s ease-in-out;
+    transform: translateY(0);
+}
+
+.fifth.current .browser .linetop{
+    transition:all 0.5s  0.2s ease-in-out;
+    transform: translateX(0);
+}
+
+.fifth.current .browser .linebottom{
+    transition:all 0.5s   ease-in-out;
+    transform: translateX(0);
+}
+
+.fifth.current .browser .toolbar{
+    transition:  all 1s ease-in-out;
+    opacity: 1;
+}
+
+.fifth.current .browser .border-box{
+    transition:  all 1s ease-in-out;
+    width: 920px;
+}
+.fifth.current .browser .taskbar{
+    transition:  all 1s ease-in-out;
+    opacity: 1;
+}
