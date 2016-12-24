@@ -4,201 +4,205 @@ body{
 }
 
 .section{
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
 }
+/*第一屏*/
 .first{
-
+    /**/
 }
 .first .logo{
     height: 186px;
     margin-top: 80px;
     background: url("../images/logo.png") center no-repeat;
 }
-
 .first .text{
     text-align: center;
-    margin: 80px 0 60px;
+    padding: 50px 0;
 }
 
 .first .text img{
-    margin: 0 34px;
+    padding: 0 30px;
     opacity: 0;
 }
 .first .extra{
-    height: 50px;
+    height: 49px;
     background: url("../images/info_1.png") center no-repeat;
 }
-/*第一屏动画*/
+
+/*第一屏动画部分*/
 .first.current .text img{
-    transition: all 1s ease-in-out;
-    margin: 0 5px;
+    padding: 0 5px ;
     opacity: 1;
+    transition: all 1s ease-in-out;
 }
+
+
+/*第二屏*/
 
 .second{
-
+    /**/
 }
 
-.second .shiel{
-    width: 436px;
+.second .shield{
+    width: 426px;
     font-size: 0;
 }
 
-.second .shiel img:nth-child(1){
+
+.second .shield img:nth-child(1){
     transform: translate(100px,-30px)rotate(27deg);
 }
-.second .shiel img:nth-child(2){
+.second .shield img:nth-child(2){
     transform: translate(280px,-30px)rotate(45deg);
 }
-.second .shiel img:nth-child(3){
+.second .shield img:nth-child(3){
     transform: translate(60px,-50px)rotate(40deg);
 }
-.second .shiel img:nth-child(4){
+.second .shield img:nth-child(4){
     transform: translate(100px,-30px)rotate(27deg);
 }
-.second .shiel img:nth-child(5){
+.second .shield img:nth-child(5){
     transform: translate(300px,-300px)rotate(97deg);
 }
-.second .shiel img:nth-child(6){
+.second .shield img:nth-child(6){
     transform: translate(160px,-120px)rotate(47deg);
 }
-.second .shiel img:nth-child(7){
+.second .shield img:nth-child(7){
     transform: translate(500px,-30px)rotate(27deg);
 }
-.second .shiel img:nth-child(8){
+.second .shield img:nth-child(8){
     transform: translate(100px,-90px)rotate(27deg);
 }
-.second .shiel img:nth-child(9){
+.second .shield img:nth-child(9){
     transform: translate(400px,-30px)rotate(27deg);
 }
-.second>div{
-    padding: 0 60px;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
+.second>div {
+    padding:0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 .second .extra{
     width: 635px;
     height: 309px;
-    background: url("../images/info_2.png");
+    background: url("../images/info_2.png") no-repeat;
 }
 
-.second.current .shiel img{
-    transition: all 1s ease ;
-    transform: translate(0.0)rotate(0deg);
+/*第二屏动画部分*/
+
+.second.current .shield img{
+    transition:all 1s ease-in-out;
+    transform: translate(0,0)rotate(0deg);
 }
 
 /*第三屏*/
 
 .third{
-
+    /**/
 }
 
-.third>div{
-    padding: 0 60px;
-    display: flex;
-    align-items:center ;
-    justify-content: space-between;
-}
 .third .extra{
-    width: 631px;
+    background: url("../images/info_3.png") no-repeat;
     height: 278px;
-    background: url("../images/info_3.png");
+    width: 631px;
 }
 
 .third .circle{
-    width: 453px;
+    background: url("../images/circle.png") no-repeat;
     height: 449px;
-    background: url("../images/circle.png");
+    width: 453px;
 }
 
 .third .rocket{
-    width: 203px;
+    background: url("../images/rocket.png") no-repeat;
     height: 204px;
-    background: url("../images/rocket.png");
+    width: 203px;
 
     position: absolute;
 
-    left: 0;
     bottom: -204px;
-
+    left: 0;
 }
 
-/*第三屏动画*/
+.third>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*第三屏动画部分*/
+
 .third.current .rocket{
     transition: all 1s ease-in-out;
     transform: translate(1000px,-380px);
 }
 
 /*第四屏*/
-.fourth{
 
+.fourth{
+    /**/
 }
 
 .fourth>div{
-    /*padding: 0 60px;*/
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
+
 .fourth .search{
+    /*background: #78a4ff;*/
+    height: 438px;
     width: 529px;
-    /*height: 400px;*/
-    /*background: url("../images/search.png");*/
-    /*background: pink;*/
+
     position: relative;
-
-    transform: translateX(-200%);
 }
 
-.fourth .search .bar{
-    width: 100%;
-    height: 66px;
+.fourth .bar{
     background: url("../images/search.png");
+    height: 66px;
+
+    transform:translate(-120%,0);
 }
 
-.fourth .search .keys{
-    width: 0px;
+.fourth .word{
+    background: url("../images/key.png") no-repeat;
     height: 22px;
-    background: url("../images/key.png");
+    width: 0px;
 
     position: absolute;
 
-    left:23px;
-    top:23px;
+    left: 15px ;
+    top: 22px;
 }
 
-.fourth .search .result{
-    width: 100%;
+.fourth .result{
     height: 372px;
     overflow: hidden;
-
-    position: relative;
-
-    top: -13px ;
+    position: absolute;
+    top: 55px;
 }
-
-.fourth .search .result img{
-    transform: translateY(-100%);
+.fourth .result img{
+    transform: translate(0,-100%);
 }
 .fourth .extra{
-    width: 612px;
-    height: 410px;
     background: url("../images/info_4.png") no-repeat;
+    width: 612px;
+    height: 428px;
 }
 
-.fourth.current .search{
-    transition:  all 1s ease-in-out;
-    transform: translate(0);
-}
+/*第四屏动画*/
 
-.fourth.current .keys{
-    animation: typing 1s 1.3s steps(5) forwards;
+.fourth.current .bar{
+    transition:all 1s ease-in-out;
+    transform: translate(0,0);
 }
-@keyframes typing{
-    from{
+.fourth.current .word{
+    animation: move 1s 1.3s steps(5) forwards;
+}
+@keyframes move {
+    form{
         width: 0;
     }
     to{
@@ -206,145 +210,113 @@ body{
     }
 }
 
-.fourth.current .search .result img{
-
-    transform: translateY(0);
-    transition: all 1s 2.5s;
+.fourth.current .result img{
+    transition:all 1s 2.5s ease-in-out;
+    transform: translate(0,0);
 }
 
-/*第五苹果*/
+/*第五屏*/
+
 .fifth{
-
+    /**/
 }
-
 .fifth>div{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
 }
-.fifth .extra {
-    width: 100%;
-    height: 200px;
+.fifth .extra{
     background: url("../images/info_5.png") center no-repeat;
+    height: 134px;
+    width: 1077px;
+    padding: 40px 0;
 }
-
 .fifth .browser{
+    /*background: #b7b7b7;*/
     width: 1004px;
     flex: 1;
-    background: deeppink;
-
     position: relative;
 }
-
-.fifth .browser .line{
+.fifth .line{
     position: absolute;
+    opacity: 0;
 }
-.fifth .browser .lineleft,
-.fifth .browser .lineright{
-    width: 0;
-    border-left: 1px solid rgba(255,255,255,0.6);
-    height: 100%;
-    top: 0;
-}
-
-.fifth .browser .lineleft{
-    left: 0;
-    transform:translateY(-100%)
-}
-
-.fifth .browser .lineright{
-    right: 0;
-    transform:translateY(100%)
-}
-
-.fifth .browser .linetop,
-.fifth .browser .linebottom{
-    left: 0;
-    border-top: 1px solid rgba(255,255,255,0.6);
-    width: 100%;
-}
-
-.fifth .browser .linetop{
-    top: 0;
-    transform:translateX(-100%)
-}
-.fifth .browser .linebottom{
-    bottom: 0;
-    transform:translateX(100%)
-
-}
-
-.fifth .browser .toolbar{
+.fifth .linetop,
+.fifth .linebottom{
     width: 1004px;
+    height: 0;
+    border-top: 1px solid rgba(255,255,255,0.6);
+    left: 0;
+}
+.fifth .linetop{
+    transform: translate(100%,0);
+}
+.fifth .linebottom{
+    bottom: 0;
+    transform: translate(-100%,0);
+}
+.fifth .lineleft,
+.fifth .lineright{
+    width: 0;
+    height: 100%;
+    border-left: 1px solid rgba(255,255,255,0.6);
+    top: 0;
+}
+.fifth .lineleft{
+    transform: translate(0,100%);
+}
+.fifth .lineright{
+    right: 0;
+    transform: translate(0,-100%);
+}
+
+.fifth .toolbar{
+    background: url("../images/toolbar.png") no-repeat;
     height: 79px;
-    background: url("../images/toolbar.png");
-
-    /*position: relative;*/
-
     opacity: 0;
 }
 
-.fifth .browser .border-box{
+.fifth .searchbox{
     width: 0px;
     height: 27px;
-    overflow: hidden;
-
     position: absolute;
     left: 70px;
     top:31px;
+    overflow: hidden;
+    opacity: 0;
 }
 
-.fifth .browser .border{
+.fifth .searchborder{
     width: 100%;
     height: 100%;
     border: 1px solid rgba(255,255,255,0.6);
     box-sizing: border-box;
-    border-radius: 3px;
 }
-.fifth .browser .taskbar{
-    width: 100%;
+
+.fifth .taskbar{
+    background: url("../images/extra.png");
     height: 29px;
+    width: 394px;
     position: absolute;
     bottom: 0;
-    left: 0;
+    right: 0;
 
     opacity: 0;
-
-    background: url("../images/extra.png") right center no-repeat;
 }
-
 /*第五屏动画*/
-
-.fifth.current .browser .lineleft{
-    transition:all 0.5s  ease-in-out;
-    transform: translateY(0);
-}
-
-.fifth.current .browser .lineright{
-    transition:all 0.5s  0.1s ease-in-out;
-    transform: translateY(0);
-}
-
-.fifth.current .browser .linetop{
-    transition:all 0.5s  0.2s ease-in-out;
-    transform: translateX(0);
-}
-
-.fifth.current .browser .linebottom{
-    transition:all 0.5s   ease-in-out;
-    transform: translateX(0);
-}
-
-.fifth.current .browser .toolbar{
-    transition:  all 1s ease-in-out;
+.fifth.current .line{
+    transition: all 0.8s ease-in-out;
+    transform:translate(0,0);
     opacity: 1;
 }
-
-.fifth.current .browser .border-box{
-    transition:  all 1s ease-in-out;
+.fifth.current .searchbox{
+    transition: all 1s ease-in-out;
     width: 920px;
+    opacity: 1;
 }
-.fifth.current .browser .taskbar{
-    transition:  all 1s ease-in-out;
+.fifth.current .toolbar ,
+.fifth.current .taskbar{
+    transition: all 1s ease-in-out;
     opacity: 1;
 }
